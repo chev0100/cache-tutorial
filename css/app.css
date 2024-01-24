@@ -58,6 +58,14 @@ button:hover {
 	color: firebrick;
 }
 
+.saveMessage {
+	margin-top: 2rem;
+	color: navy;
+	padding: 2rem 4rem;
+	background-color: gainsboro;
+	margin-bottom: 2rem;
+}
+
 #contentForm {
 	display: flex;
 	flex-direction: column;
