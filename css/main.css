@@ -1,0 +1,101 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/* Add font stack */
+	font-family: 'Monaspace Krypton', sans-serif;
+}
+html {
+	font-size: 62.5%;
+}
+
+body {
+	min-height: 100vh;
+	font-size: 1.6rem;
+	background-color: linen;
+}
+
+header {
+	margin: 0 auto;
+	padding: 4rem 2rem;
+	max-width: 100rem;
+	background-color: navy;
+	color: floralwhite;
+}
+
+main {
+	margin: 0 auto;
+	width: 100rem;
+	padding: 2rem 0;
+}
+
+section {
+	margin-bottom: 4rem;
+}
+
+h2 {
+	margin-bottom: 2rem;
+}
+
+button {
+	padding: 1rem 2rem;
+	border: 0.2rem solid navy;
+	border-radius: 0.5rem;
+	background-color: white;
+	color: navy;
+	font-size: 1.6rem;
+	cursor: pointer;
+	font-weight: 800;
+	transition: all 0.1s ease-out;
+}
+
+button:hover {
+	background-color: navy;
+	color: white;
+}
+
+.warning {
+	color: firebrick;
+}
+
+#contentForm {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 4rem;
+}
+
+#createContent {
+	align-self: flex-start;
+}
+
+#contentDisplay {
+	padding: 4rem;
+	background-color: gainsboro;
+	margin-bottom: 2rem;
+}
+
+#filenameDisplay {
+	padding: 2rem 4rem;
+	background-color: gainsboro;
+	margin-bottom: 2rem;
+}
+
+#files {
+	list-style: none;
+	padding: 4rem;
+	background-color: gainsboro;
+	margin-bottom: 2rem;
+}
+
+pre {
+	white-space: pre-wrap;
+	padding: 4rem;
+	background-color: gainsboro;
+	margin-bottom: 2rem;
+}
+
+code {
+	font-family: 'Monaspace Radon', sans-serif;
+	font-size: 1.4rem;
+}
