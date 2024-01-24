@@ -66,6 +66,10 @@ button:hover {
 	margin-bottom: 2rem;
 }
 
+.saveMessage.success {
+	color: green;
+}
+
 #contentForm {
 	display: flex;
 	flex-direction: column;

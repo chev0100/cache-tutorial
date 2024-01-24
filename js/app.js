@@ -11,6 +11,7 @@ const APP = {
 		filenameDisplay: null,
 		contentDisplay: null,
 		warning: null,
+		saveMessage: null,
 	},
 	init() {
 		console.log('APP initialized');
@@ -21,6 +22,7 @@ const APP = {
 		APP.elements.contentDisplay = document.getElementById('contentDisplay');
 
 		APP.elements.warning = document.querySelector('.warning');
+		APP.elements.saveMessage = document.querySelector('.saveMessage');
 
 		document
 			.getElementById('contentForm')
@@ -58,27 +60,18 @@ const APP = {
 		APP.elements.contentDisplay.textContent = APP.formContent.content;
 	},
 
+	updateDisplay() {
+		APP.elements.filenameDisplay.textContent = '';
+		APP.elements.contentDisplay.textContent = '';
+		APP.elements.saveMessage.textContent = 'File saved in cache';
+		APP.elements.saveMessage.classList.add('success');
+	},
+
 	saveContent(ev) {
 		ev.preventDefault();
 		console.log('saveContent');
 		console.log(APP.formContent);
-		let json = JSON.stringify(APP.formContent);
-		let idNum = crypto.randomUUID();
-		console.log(idNum);
-		let filename = `${APP.formContent.filename}-${idNum}.json`;
-		console.log(filename);
-		let file = new File([json], filename, { type: 'application/json' });
-		console.log(file);
-
-		const response = new Response(file, {
-			status: 200,
-			statusText: 'File is OK',
-			headers: {
-				'Content-Type': 'application/json',
-				'Content-Length': file.size,
-				'X-file': file.name,
-			},
-		});
+		APP.updateDisplay();
 	},
 };
 
