@@ -59,11 +59,15 @@ button:hover {
 }
 
 .saveMessage {
-  margin-top: 2rem;
-  color: navy;
-  padding: 2rem 4rem;
-  background-color: gainsboro;
-  margin-bottom: 2rem;
+	margin-top: 2rem;
+	color: navy;
+	padding: 2rem 4rem;
+	background-color: gainsboro;
+	margin-bottom: 2rem;
+}
+
+.saveMessage.success {
+	color: green;
 }
 
 #contentForm {

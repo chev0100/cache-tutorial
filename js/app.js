@@ -11,6 +11,7 @@ const APP = {
 		filenameDisplay: null,
 		contentDisplay: null,
 		warning: null,
+		saveMessage: null,
 	},
 	init() {
 		console.log('APP initialized');
@@ -21,6 +22,7 @@ const APP = {
 		APP.elements.contentDisplay = document.getElementById('contentDisplay');
 
 		APP.elements.warning = document.querySelector('.warning');
+		APP.elements.saveMessage = document.querySelector('.saveMessage');
 
 		document
 			.getElementById('contentForm')
@@ -58,6 +60,13 @@ const APP = {
 		APP.elements.contentDisplay.textContent = APP.formContent.content;
 	},
 
+	updateDisplay() {
+		APP.elements.filenameDisplay.textContent = '';
+		APP.elements.contentDisplay.textContent = '';
+		APP.elements.saveMessage.textContent = 'File saved in cache';
+		APP.elements.saveMessage.classList.add('success');
+	},
+
 	saveContent(ev) {
 		ev.preventDefault();
 		console.log('saveContent');
@@ -85,8 +94,7 @@ const APP = {
 		CACHE.saveInCache(url, response)
 			.then(() => {
 				console.log('File saved in cache');
-				APP.elements.filenameDisplay.textContent = '';
-				APP.elements.contentDisplay.textContent = '';
+				APP.updateDisplay();
 			})
 			.catch((err) => {
 				console.log(err);
