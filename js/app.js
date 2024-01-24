@@ -1,3 +1,5 @@
+import CACHE from './cache.js';
+
 const APP = {
 	formContent: {
 		filename: '',
@@ -12,6 +14,7 @@ const APP = {
 	},
 	init() {
 		console.log('APP initialized');
+		CACHE.init();
 		APP.elements.filename = document.getElementById('filename');
 		APP.elements.content = document.getElementById('content');
 		APP.elements.filenameDisplay = document.getElementById('filenameDisplay');
@@ -76,7 +79,7 @@ const APP = {
 				'X-file': file.name,
 			},
 		});
-	}
+	},
 };
 
 document.addEventListener('DOMContentLoaded', APP.init);
