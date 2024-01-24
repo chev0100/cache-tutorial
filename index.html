@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create and Cache Files</title>
+		<link rel="stylesheet" href="css/main.css" />
+
+		<script type="module" src="/js/main.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Create and Cache Files</h1>
+		</header>
+		<main>
+			<section id="dataEntry">
+				<h2>Create Files</h2>
+				<form action="#" id="contentForm">
+					<label for="filename">Filename</label>
+					<input type="text" name="filename" id="filename" />
+					<label for="content">Content</label>
+					<textarea name="content" id="content" cols="30" rows="10"></textarea>
+					<button id="createContent">Create Content</button>
+				</form>
+				<span class="warning"></span>
+				<h2>File Content</h2>
+				<p id="filenameDisplay">No filename.</p>
+				<div id="contentDisplay">
+					<p>No content.</p>
+				</div>
+				<button id="saveContent">Save Content</button>
+			</section>
+			<section class="dataFiles">
+				<h2>Files</h2>
+				<ul id="files">
+					<li>No files.</li>
+				</ul>
+			</section>
+			<section class="dataDisplay">
+				<h2>Display Content</h2>
+				<pre><code>Nothing here!</code></pre>
+			</section>
+		</main>
+	</body>
+</html>
