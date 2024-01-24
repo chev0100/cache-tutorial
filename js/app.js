@@ -79,6 +79,18 @@ const APP = {
 				'X-file': file.name,
 			},
 		});
+
+		let url = new URL(filename, location.origin);
+
+		CACHE.saveInCache(url, response)
+			.then(() => {
+				console.log('File saved in cache');
+				APP.elements.filenameDisplay.textContent = '';
+				APP.elements.contentDisplay.textContent = '';
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 	},
 };
 
